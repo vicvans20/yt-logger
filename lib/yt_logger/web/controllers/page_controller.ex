@@ -4,4 +4,8 @@ defmodule YtLogger.Web.PageController do
   def index(conn, _params) do
     render conn, "index.html"
   end
+
+  def history(conn, _params) do
+    render conn, "history.html"
+  end
 end
