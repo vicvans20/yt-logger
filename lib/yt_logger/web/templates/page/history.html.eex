@@ -1,0 +1,26 @@
+<div class="jumbotron">
+  <div class="text-xs-center">
+    <h1>Yt Logger</h1>
+  </div>
+</div>
+
+<div>
+  <table class="table">
+    <thead class="thead-inverse">
+      <tr>
+        <th>Test</th>
+        <th>Title</th>
+        <th>Owner</th>
+        <th>Channel</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Test</td>
+        <td>Test</td>
+        <td>Test</td>
+        <td>Test</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
