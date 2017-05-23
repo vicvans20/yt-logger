@@ -56,3 +56,8 @@ config :yt_logger, YtLogger.Repo,
   database: "yt_logger_dev",
   hostname: "localhost",
   pool_size: 10
+
+config :oauth2, Google,
+  client_id: System.get_env("YT_LOG_GID"),
+  client_secret: System.get_env("YT_LOG_GS"),
+  redirect_uri: System.get_env("YT_LOG_GURL")

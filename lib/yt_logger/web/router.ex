@@ -18,6 +18,7 @@ defmodule YtLogger.Web.Router do
 
     get "/", PageController, :index
     get "/logger", PageController, :history
+    get "/oauth_app", PageController, :yt_oauth
   end
 
   # Other scopes may use custom stacks.

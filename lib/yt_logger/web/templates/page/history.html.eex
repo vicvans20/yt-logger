@@ -1,6 +1,10 @@
 <div class="jumbotron">
   <div class="text-xs-center">
     <h1>Yt Logger</h1>
+    <a href="<%= assigns[:oauth2_url] %>" class="btn btn-info btn-block">
+      Auth App
+    </a>
+    <h5>Code: <%= assigns[:code] %></h5>
   </div>
 </div>
 
