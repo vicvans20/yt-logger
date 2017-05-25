@@ -18,7 +18,7 @@
           <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <a class="navbar-brand" href="#">YtLogger</a>
+          <a class="navbar-brand" href="/">YtLogger</a>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <%= case @current_user  do %>
@@ -31,13 +31,16 @@
                   </li>
                 <%= user -> %>
                   <li class="nav-item">
-                   Welcome back <%= user.name %>
+                    <%= link "Log out", to: session_path(@conn, :delete), class: "nav-link" %>
                   </li>
               <% end %>
             </ul>
           </div>
         </nav>
         <span class="logo"></span>
+        <%= if @current_user != nil do %>
+          <h1 class="text-sm-center">Welcome back, <%= @current_user.name %></h1>
+        <% end %>
       </header>
 
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
