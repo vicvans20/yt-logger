@@ -21,8 +21,19 @@
           <a class="navbar-brand" href="#">YtLogger</a>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-              <li class="nav-item">
-              </li>
+              <%= case @current_user  do %>
+                <%= nil -> %>
+                  <li class="nav-item">
+                    <%= link "Log in", to: session_path(@conn, :new), class: "nav-link" %>
+                  </li>
+                  <li class="nav-item">
+                    <%= link "Register", to: registration_path(@conn, :new), class: "nav-link" %>
+                  </li>
+                <%= user -> %>
+                  <li class="nav-item">
+                   Welcome back <%= user.name %>
+                  </li>
+              <% end %>
             </ul>
           </div>
         </nav>
