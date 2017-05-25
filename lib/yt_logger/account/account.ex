@@ -51,7 +51,7 @@ defmodule YtLogger.Account do
   """
   def create_user(attrs \\ %{}) do
     %User{}
-    |> User.changeset(attrs)
+    |> User.registration_changeset(attrs) # Use custom registration changeset to hash password
     |> Repo.insert()
   end
 
