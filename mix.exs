@@ -17,7 +17,7 @@ defmodule YtLogger.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [mod: {YtLogger.Application, []},
-     extra_applications: [:logger, :runtime_tools, :oauth2]]
+     extra_applications: [:logger, :runtime_tools, :oauth2, :comeonin]]
   end
 
   # Specifies which paths to compile per environment.
@@ -36,7 +36,8 @@ defmodule YtLogger.Mixfile do
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.11"},
      {:cowboy, "~> 1.0"},
-     {:oauth2, "~> 0.9"}
+     {:oauth2, "~> 0.9"},
+     {:comeonin, "~> 3.0"},
    ]
   end
 
