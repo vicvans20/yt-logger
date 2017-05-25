@@ -40,14 +40,14 @@ defmodule YtLogger.Web.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
-    get "/logger", PageController, :history
-    get "/oauth_app", PageController, :yt_oauth
   end
 
   scope "/", YtLogger.Web do
     pipe_through :protected
 
     # add protected resources below
+    get "/logger", PageController, :history
+    get "/oauth_app", PageController, :yt_oauth
     resources "/privates", MyProject.PrivateController
   end
 
