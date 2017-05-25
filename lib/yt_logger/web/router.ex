@@ -19,8 +19,8 @@ defmodule YtLogger.Web.Router do
     get "/", PageController, :index
     get "/logger", PageController, :history
     get "/oauth_app", PageController, :yt_oauth
-    
-    resources "/users", UserController, only: [:show, :new, :create]
+
+    resources "/users", UserController
   end
 
   # Other scopes may use custom stacks.
