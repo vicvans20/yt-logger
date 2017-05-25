@@ -6,6 +6,8 @@ defmodule YtLogger.User do
   schema "users" do
     field :name, :string
     field :email, :string
+    field :g_access_token, :string
+    field :g_refresh_token, :string
     coherence_schema()
 
     timestamps()
