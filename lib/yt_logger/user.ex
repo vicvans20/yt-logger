@@ -8,6 +8,7 @@ defmodule YtLogger.User do
     field :email, :string
     field :first_name, :string
     field :last_name, :string
+    field :password_virtual, :string, virtual: true
     field :password, :string
     field :role, :string
 
@@ -18,6 +19,6 @@ defmodule YtLogger.User do
   def changeset(%User{} = user, attrs) do
     user
     |> cast(attrs, [:email, :first_name, :last_name, :password, :role])
-    |> validate_required([:email, :first_name, :last_name, :password, :role])
+    |> validate_required([:email])
   end
 end
