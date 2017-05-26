@@ -15,7 +15,7 @@ defmodule YtLogger.User do
 
   def changeset(model, params \\ %{}) do
     model
-    |> cast(params, [:name, :email] ++ coherence_fields())
+    |> cast(params, [:name, :email, :g_access_token, :g_refresh_token] ++ coherence_fields())
     |> validate_required([:name, :email])
     |> validate_format(:email, ~r/@/)
     |> unique_constraint(:email)
